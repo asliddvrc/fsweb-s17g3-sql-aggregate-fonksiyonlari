@@ -60,7 +60,9 @@ SELECT ogrenci.ograd, ogrenci.ogrsoyad, islem.atarih FROM ogrenci, islem WHERE o
     11) Öğrencilerin adı soyadı ve aldıkları kitabın adı listelensin.
      SELECT ogrenci.ograd, ogrenci.ogrsoyad, kitap.kitapadi FROM ogrenci INNER JOIN islem ON ogrenci.ogrno = islem.ogrno INNER JOIN kitap ON islem.kitapno = kitap.kitapno ORDER BY ogrenci.ograd;
 
-    12) Her öğrencinin adı, soyadı, kitabın adı, yazarın adı soyad ve kitabın türünü ve kitabın alındığı tarihi listeleyiniz. Kitap almayan öğrenciler de listede görünsün.SELECT ogrenci.ograd, ogrenci.ogrsoyad, kitap.kitapadi, yazar.yazarad, yazar.yazarsoyad, tur.turadi, islem.atarih FROM ogrenci LEFT JOIN islem ON ogrenci.ogrno = islem.ogrno LEFT JOIN kitap ON islem.kitapno = kitap.kitapno LEFT JOIN yazar ON kitap.kitapno = yazar.yazarno LEFT JOIN tur ON kitap.turno = tur.turno ORDER BY ogrenci.ograd;
+    12) Her öğrencinin adı, soyadı, kitabın adı, yazarın adı soyad ve kitabın türünü ve kitabın alındığı tarihi listeleyiniz. Kitap almayan öğrenciler de listede görünsün.
+
+    SELECT ogrenci.ograd, ogrenci.ogrsoyad, kitap.kitapadi, yazar.yazarad, yazar.yazarsoyad, tur.turadi, islem.atarih FROM ogrenci LEFT JOIN islem ON ogrenci.ogrno = islem.ogrno LEFT JOIN kitap ON islem.kitapno = kitap.kitapno LEFT JOIN yazar ON kitap.kitapno = yazar.yazarno LEFT JOIN tur ON kitap.turno = tur.turno ORDER BY ogrenci.ograd;
 
 
     13) 10A veya 10B sınıfındaki öğrencilerin adı soyadı ve okuduğu kitap sayısını getirin.
